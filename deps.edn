@@ -6,7 +6,7 @@
         ;; Back-end dependencies
         ring/ring {:mvn/version "1.11.0"}
         metosin/reitit {:mvn/version "0.7.0"}}
- :aliases
+:aliases
  {:run-m {:main-opts ["-m" "com.iraqidata.training"]}
   :run-x {:ns-default com.iraqidata.training
           :exec-fn greet

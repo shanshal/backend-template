@@ -2,11 +2,8 @@
 
 /*-- scss:rules --*/
 .table {
-    width: auto
-}
-
-code {
-    font-family: 'Fira Code Medium', monospace;
+    width: auto;
+    max-width: 100%
 }
 
 .clay-dataset {
@@ -16,4 +13,10 @@ code {
 .clay-dataset .table {
     @extend .table-striped;
     @extend .table-hover;
+}
+
+code {font-family: 'Fira Code Italic', monospace;}
+
+.clay-image img {
+    max-width: 100%
 }
