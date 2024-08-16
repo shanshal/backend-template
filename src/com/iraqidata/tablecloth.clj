@@ -724,3 +724,28 @@ sum((seq(2, 8, by = 2) * 3.5)^2)
               :data (-> ds
                         :data
                         vec)}]}))
+
+;; Variable
+
+;; Up to 16 rows.
+
+;; Do not exceed 16.
+
+(let [n 1
+      ds (-> (tc/inner-join ds airlines [:carrier])
+             (tc/group-by :name)
+             (tc/mean :arr-delay)
+             (tc/rename-columns [:name :data])
+             (tc/order-by :data :desc))]
+  (kind/highcharts
+   {:chart {:type "bar"}
+    :title {:text "Airlines with the most delays"}
+    :xAxis {:categories (-> ds
+                            :name
+                            vec)}
+    :tooltip {:pointFormat "{series.name}: <b>{point.y:.1f}</b>"}
+    :yAxis {:title {:text "Average Delay"}}
+    :series [{:name "Average Delay"
+              :data (-> ds
+                        :data
+                        vec)}]}))
