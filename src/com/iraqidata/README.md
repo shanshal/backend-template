@@ -47,11 +47,13 @@ Return the top 10 customers by total `:unit-price`.
 *Optional*: Make the endpoint interactive with a query or path parameter.
 
 ``` json
-{ "data": [
-  ["14096",41376.33000000013],
-  ["15098",40278.899999999994],
-  ["14911",31060.660000001088]
-]}
+{
+  "data": [
+    ["14096", 41376],
+    ["15098", 40278],
+    ["14911", 31060]
+  ]
+}
 ```
 
 <!-- Local Variables: -->
