@@ -58,6 +58,10 @@ unique-carriers
       (tc/order-by :avg-distance-summary :desc)
       (tc/first)))
 
+;; Half point
+
 (def airlines
   (tc/dataset "./resources/data/airlines.csv"
               {:key-fn keyword}))
+
+;; Final score: 2.5 points
